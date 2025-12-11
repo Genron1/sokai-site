@@ -39,7 +39,20 @@ document.addEventListener("DOMContentLoaded", () => {
       const text = shareBtn.dataset.shareText || "";
       const url = shareBtn.dataset.shareUrl || "";
       const intentUrl = `https://x.com/intent/post?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
-      window.open(intentUrl, "_blank", "noopener,noreferrer");
+      const deepLink = `twitter://post?message=${encodeURIComponent(`${text} ${url}`)}`;
+      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+      if (isMobile) {
+        // Try to open Xアプリ; fallback to intent in case未インストール
+        const fallback = setTimeout(() => {
+          window.open(intentUrl, "_blank", "noopener,noreferrer");
+        }, 700);
+        window.location.href = deepLink;
+        // Clear fallback if navigation succeeds quickly (best-effort)
+        setTimeout(() => clearTimeout(fallback), 1000);
+      } else {
+        window.open(intentUrl, "_blank", "noopener,noreferrer");
+      }
     });
   }
 });
