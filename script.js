@@ -43,13 +43,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
       if (isMobile) {
-        // Try to open Xアプリ; fallback to intent in case未インストール
+        // Try to open Xアプリ（同一タブ遷移）。未インストール時のみ intent にフォールバック。
         const fallback = setTimeout(() => {
-          window.open(intentUrl, "_blank", "noopener,noreferrer");
-        }, 700);
+          window.location.href = intentUrl;
+        }, 900);
         window.location.href = deepLink;
-        // Clear fallback if navigation succeeds quickly (best-effort)
-        setTimeout(() => clearTimeout(fallback), 1000);
+        setTimeout(() => clearTimeout(fallback), 1600);
       } else {
         window.open(intentUrl, "_blank", "noopener,noreferrer");
       }
