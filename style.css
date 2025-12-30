@@ -175,7 +175,7 @@ main {
 }
 
 .hero-title {
-  font-size: clamp(2.1rem, 5vw, 3.3rem);
+  font-size: clamp(1.35rem, 3.1vw, 2.1rem);
   line-height: 1.1;
   margin: 0;
   font-weight: 900;
@@ -188,6 +188,19 @@ main {
 
 .hero-title-base {
   color: #fff;
+}
+
+.hero-year {
+  color: #fff;
+}
+
+.hero-theme {
+  display: block;
+  margin-top: 10px;
+  font-size: clamp(3.2rem, 7.2vw, 5.4rem);
+  letter-spacing: 0.08em;
+  color: #ff5414;
+  color: var(--orange-deep);
 }
 
 .hero-lead {
