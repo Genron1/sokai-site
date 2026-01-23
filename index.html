@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ゲンロン友の会総会2026特設ページ</title>
+  <title>ゲンロン友の会総会2026特設ページ | ゲンロン</title>
   <meta name="description" content="今年の友の会総会は2026年3月20日（金・祝）に開催。トークありパフォーマンスあり展示あり会員の出店あり、ゲンロンの媒体でお馴染みの方が多数集結する、文字どおりのお祭りです。">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <meta property="og:type" content="website">
@@ -15,227 +15,430 @@
   <meta name="twitter:title" content="ゲンロン友の会総会2026特設ページ">
   <meta name="twitter:description" content="今年の友の会総会は2026年3月20日（金・祝）に開催。トークありパフォーマンスあり展示あり会員の出店あり、ゲンロンの媒体でお馴染みの方が多数集結する、文字どおりのお祭りです。">
   <meta name="twitter:image" content="http://sokai.genron.co.jp/assets/ogp.jpg">
+
+  <!-- Google Font: Zen Maru Gothic -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css" />
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="header-inner content">
-      <div class="brand">
-        <span class="brand-text">ゲンロン友の会総会<span class="text-accent">2026</span></span>
-      </div>
-      <nav aria-label="メインナビゲーション">
-        <ul class="nav-links">
-          <li><a href="#hero">トップ</a></li>
-          <li><a href="#schedule">スケジュール</a></li>
-          <li><a href="#action">マーケット</a></li>
-        </ul>
-      </nav>
+  <!-- Topbar -->
+  <header class="topbar" id="top">
+    <div class="topbar__inner">
+      <a class="brand" href="#top" aria-label="トップへ">
+        <sapn class="brand__text">ゲンロン友の会総会</span><sapn class="brand__text_year">2026</span>
+      </a>
+
+      <button class="hamburger" type="button"
+        aria-label="メニューを開く"
+        aria-controls="drawer"
+        aria-expanded="false"
+        id="menuBtn">
+        <span class="hamburger__icon" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+      </button>
     </div>
   </header>
 
+  <!-- Drawer -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="drawer" aria-hidden="true">
+    <div class="drawer__head">
+      <div class="drawer__title">目次</div>
+      <button class="drawer__close" type="button" aria-label="メニューを閉じる" id="closeBtn">×</button>
+    </div>
+
+    <nav class="drawer__nav">
+      <a class="drawer__link" href="#news">NEWS</a>
+      <a class="drawer__link" href="#about">ABOUT</a>
+      <a class="drawer__link" href="#ticket">TICKET</a>
+      <a class="drawer__link" href="#timetable">TIME TABLE</a>
+      <a class="drawer__link" href="#map">会場MAP</a>
+      <a class="drawer__link" href="#program-1">第1部</a>
+      <a class="drawer__link" href="#program-2">第2部</a>
+      <a class="drawer__link" href="#access">ACCESS</a>
+      <a class="drawer__link" href="#tomonokai">友の会案内</a>
+    </nav>
+  </aside>
+
   <main>
+    <!-- HERO -->
+    <!-- TEASER from here -->
     <section class="hero" id="hero">
       <div class="page-bg" aria-hidden="true"></div>
       <div class="hero-inner content">
         <div class="hero-copy">
-          <h1 class="hero-title hero-title--shadow" data-animate="fade-up" data-delay="120">
+          <h1 class="hero-title hero-title--shadow is-visible" data-animate="fade-up" data-delay="120" style="transition-delay: 120ms;">
             <span class="hero-title-base">ゲンロン友の会総会</span><span class="hero-year">2026</span><br>
             <span class="hero-theme">愚かさ復活</span>
           </h1>
-          <p class="hero-lead hero-lead--shadow" data-animate="fade-up" data-delay="160">
+          <p class="hero-lead hero-lead--shadow is-visible" data-animate="fade-up" data-delay="160" style="transition-delay: 160ms;">
             友の会には年に1回、会員限定の大きな集会があります。それが第16期で15回目を迎える「総会」です（第3期は未開催）。<br>
             トークありパフォーマンスあり展示あり会員の出店あり、ゲンロンの媒体でお馴染みの方が多数集結する、文字どおりのお祭りです。<br>
             もちろんゲンロンなので時間もたっぷり。オンラインでも参加できます。ぜひいちどご参加ください。
           </p>
-          <a class="inline-link" href="https://shop.genron.co.jp/pages/tmnk" target="_blank" rel="noopener noreferrer" data-animate="fade-up" data-delay="190">
-            友の会について詳しくはこちら
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="inline-icon">
-              <path d="M4.8 19.2H19.2V12.8H21.2V21.2H2.8V2.8H11.2V4.8H4.8V19.2ZM13.7 4.8V2.8H21.2V10.3H19.2V6.2L10.5 14.9L9.1 13.5L17.8 4.8H13.7Z"
-                fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
+        </div>
           <div class="hero-date" data-animate="fade-up" data-delay="220">
-            <div class="date-line">
-              <span class="date-label">開催日</span>
+          <div class="date-line">
+            <p class="date-label">開催日</p>
               <time datetime="2026-03-20" class="date-text">2026年3月20日<span class="date-small">（金・祝）</span></time>
-            </div>
-            <div class="date-sep" aria-hidden="true"></div>
-            <div class="date-line">
-              <span class="date-label">会場</span>
-              <div class="date-venue">
-                <span class="venue-line"><strong>第1部：</strong>CITY HALL &amp; GALLERY GOTANDA</span>
-                <span class="venue-line"><strong>第2部：</strong>ゲンロンカフェ／シラススタジオ ほか</span>
+          </div>
+          <div class="date-sep" aria-hidden="true"></div>
+          <div class="date-line">
+            <p class="date-label">会場</p>
+            <div class="date-venue">
+              <div class="venue-list " role="row">
+                <p class="venue-line" role="rowheader">第1部：</dt>
+                <p class="venue-name" role="cell"><span>CITY HALL & GALLERY GOTANDA</span></p>
+              </div>
+
+              <div class="venue-list " role="row">
+                <p class="venue-line" role="rowheader">第2部：</dt>
+                <p class="venue-name" role="cell"><span>ゲンロンカフェ／シラススタジオ／特設バー会場</span></p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- TEASER until here -->
 
-    <section class="schedule" id="schedule">
-      <div class="section-header content">
-        <p class="eyebrow">Schedule</p>
-        <h2>スケジュール</h2>
-      </div>
-      <div class="timeline content">
-        <article class="timeline-card" data-animate="fade-up">
-          <div class="timeline-date">
-            <time datetime="2025-12-19">2025年12月19日（金）</time>
+    <!-- CTA -->
+    <div class="cta">
+      <!-- <p class="cta__note">\チケット絶賛発売中！/</p> -->
+      <p class="cta__note">\上級会員さま先行チケット発売開始！/</p>
+      <a class="btn" href="https://shop.genron.co.jp/products/sokai" target="_blank">チケットのご購入はこちらから</a>
+    </div>
+
+    <!-- NEWS -->
+    <section id="news" class="section section--white">
+      <div class="container">
+        <h2 class="section-title">NEWS</h2>
+
+        <div class="news" role="list">
+          <div class="news__item" role="listitem">
+            <div class="news__date">2025/01/23</div>
+            <p class="news__text"><a href="https://shop.genron.co.jp/products/sokai" target="_blank">上級会員先行チケット</a>を発売しました。</p>
           </div>
-          <h3>コミュニティマーケット募集開始</h3>
-          <p>総会お馴染みの即売会企画の出店者を募集開始。</p>
-        </article>
-        <article class="timeline-card" data-animate="fade-up" data-delay="80">
-          <div class="timeline-date">
-            <time datetime="2025-12-25">2025年12月下旬</time>
-          </div>
-          <h3>メインテーマ発表</h3>
-          <p>一昨年の「人間拡張」、昨年の「雑談復活」に続くテーマを発表。</p>
-        </article>
-        <article class="timeline-card" data-animate="fade-up" data-delay="160">
-          <div class="timeline-date">
-            <time datetime="2026-01-25">2026年1月下旬</time>
-          </div>
-          <h3>登壇者発表・チケット発売</h3>
-          <p>豪華ゲスト、タイムテーブルを順次公開していきます。</p>
-        </article>
       </div>
     </section>
 
-    <section class="action" id="action">
-      <div class="action-inner content">
-        <div class="action-text">
-          <p class="eyebrow text-accent">Community Market</p>
-          <h2 class="action-heading">
-            <span class="heading-stack">ゲンロン・シラス</span>
-            <span class="heading-stack">コミュニティマーケット</span>
-          </h2>
-          <p>総会お馴染みの即売会企画「ゲンロン・シラス コミュニティマーケット」を今年も開催します。友の会会員とシラス配信者による多彩なブースが勢揃いするフリーマーケット。出店内容は同人誌や手工芸作品、お菓子などの販売から、占いやサークルの活動紹介など多種多様です。</p>
-          <p>今年はマーケット会場をこれまでのメインホールから、より広いエントランスへ移して開催します。さらに、マーケット会場はチケット不要でどなたでも入場できます！　ぜひふるってご参加ください。</p>
-          <figure class="action-visual" data-animate="fade-up" data-delay="40">
-            <div class="visual-frame">
-              <img src="assets/entrance_01.jpg" alt="マーケット会場 CITY HALL &amp; GALLERY GOTANDA のエントランス">
-              <span class="visual-chip">マーケット会場</span>
-            </div>
-            <figcaption>CITY HALL &amp; GALLERY GOTANDA エントランス</figcaption>
-          </figure>
-          <div class="action-details" data-animate="fade-up" data-delay="60" aria-label="コミュニティマーケット概要">
-            <div class="info-table-wrapper">
-              <table class="info-table">
-                <caption>募集概要</caption>
-                <tbody>
-                  <tr>
-                    <th scope="row">会場</th>
-                    <td>CITY HALL &amp; GALLERY GOTANDA エントランス</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">出店数</th>
-                    <td>30〜40ブース程度</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">出店資格</th>
-                    <td>友の会16期会員、またはシラス配信者</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">出店料金</th>
-                    <td>
-                      <p>出店料　24,200円（税込）</p>
-                      <p>※出店者には第1部入場パスを2名分（19,800円相当）ご提供します。入場パスには配信視聴権2名分も含みます。</p>
-                      <p>※総会第2部へのご参加には追加でチケット購入が必要です。お1人につき7,700円で第2部チケットをご購入いただけます。</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">提供内容</th>
-                    <td>
-                      <ul class="info-list">
-                        <li>テーブル：W900 × D450 × H720 mm<br>※W1,800 × D450 × H720 mm のテーブル1台を2組で半分ずつ使用</li>
-                        <li>イス：2脚</li>
-                        <li>電源：利用可（要事前申請）</li>
-                      </ul>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">スケジュール</th>
-                    <td>
-                      <ul class="info-list">
-                        <li>12/19（金）出店申込受付開始</li>
-                        <li>1/20（月）出店審査結果通知開始</li>
-                        <li>1/30（金）出店申込締切</li>
-                        <li>2月初旬　ブース情報・広報素材 提出締切</li>
-                        <li>2月下旬　出店手引きを配布</li>
-                      </ul>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="action-notes">
-              <h3>出店者向け注意事項</h3>
-              <div class="note-body">
-                <ul class="info-list">
-                  <li>マーケット会場は、<strong>友の会会員以外の方でも入場できます</strong>（チケット不要）。非会員の方がブース運営をお手伝いいただくことも可能です。</li>
-                  <li><strong>会場内は気温が低くなる場合があります</strong>。ご自身で防寒対策をいただくようお願いいたします。</li>
-                  <li>マーケット会場とトーク会場が離れているため、<strong>出店中はトークをご観覧いただけません</strong>。観覧をご希望の場合は、交代できる方をお探しいただくなどの対応をご検討ください。</li>
-                  <li><strong>マーケット会場内での飲食はできません</strong>。飲食はホワイエ等の指定場所、またはJPビル内の飲食店をご利用ください。</li>
+    <!-- ABOUT -->
+    <section id="about" class="section section--white">
+      <div class="container">
+        <h2 class="section-title">ABOUT</h2>
+        <div class="about">
+          <p>年に1度行われる会員限定の特別なイベント、「ゲンロン友の会総会」。トークあり、パフォーマンスあり、展示あり、会員の出店ありと、文字どおりのお祭りです。<br>もちろんゲンロンなので時間もたっぷり。オンラインでも参加できます。ぜひいちどご参加ください。</p>
+          <div class="info-table" role="table" aria-label="イベント概要">
+            <dl class="info-table__row" role="row">
+              <dt class="info-table__th" role="rowheader">日程</dt>
+              <dd class="info-table__td" role="cell">2026年3月20日（金・祝） 開場 10:00 / 開演 10:30</dd>
+            </dl>
+
+            <dl class="info-table__row" role="row">
+              <dt class="info-table__th" role="rowheader">時間</dt>
+              <dd class="info-table__td" role="cell">第1部　11:30〜20:00<br>第2部　21:00〜28:00</dd>
+            </dl>
+
+            <dl class="info-table__row" role="row">
+              <dt class="info-table__th" role="rowheader">会場</dt>
+              <dd class="info-table__td" role="cell">第1部　CITY HALL & GALLERY GOTANDA<br>第2部　ゲンロンカフェ／シラススタジオ／特設バー会場<br><br><a href="#access">会場へのアクセスはこちら</a></dd>
+            </dl>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TICKET -->
+    <section id="ticket" class="section section--white">
+      <div class="container">
+        <h2 class="section-title">TICKET</h2>
+        <div class="center-block">
+          <p class="annotation">※価格はすべて税込です<br><span>※すべての来場チケットに配信チケットが含まれます</span></p>
+          <div class="info-table" role="table" aria-label="チケット情報">
+            <dl class="info-table__row" role="row">
+              <dt class="info-table__th" role="rowheader">一般（第1部）</dt>
+              <dd class="info-table__td" role="cell"><span>¥9,900</span></dd>
+            </dl>
+
+            <dl class="info-table__row" role="row">
+              <dt class="info-table__th" role="rowheader">中高生（第1部）</dt>
+              <dd class="info-table__td" role="cell"><span>¥5,500</span></dd>
+            </dl>
+
+            <dl class="info-table__row" role="row">
+              <dt class="info-table__th" role="rowheader">同伴（第1部）</dt>
+              <dd class="info-table__td" role="cell"><span>¥11,000</span></dd>
+            </dl>
+
+            <dl class="info-table__row" role="row">
+              <dt class="info-table__th" role="rowheader">一般（第1部+第2部）</dt>
+              <dd class="info-table__td" role="cell"><span>¥16,500</span></dd>
+            </dl>
+
+            <dl class="info-table__row" role="row">
+              <dt class="info-table__th" role="rowheader">同伴（第1部+第2部）</dt>
+              <dd class="info-table__td" role="cell"><span>¥17,600</span></dd>
+            </dl>
+          </div>
+          <p class="annotation">※学生（大学生以上、ゲンロンスクール含む）は会場で1,000円キャッシュバック</p>
+          <a class="btn" href="https://shop.genron.co.jp/products/sokai" target="_blank">チケットを購入する</a> 
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TIME TABLE -->
+    <section id="timetable" class="section section--white">
+      <div class="container">
+        <h2 class="section-title">TIME TABLE</h2>
+        <p class="comingsoon">COMING SOON!!!</p>
+      </div>
+    </section>
+
+    <!-- MAP -->
+    <section id="map" class="section section--white">
+      <div class="container">
+        <h2 class="section-title">会場MAP</h2>
+        <p class="comingsoon">COMING SOON!!!</p>
+      </div>
+    </section>
+
+    <!-- ===== Program: 第一部（クリーム背景っぽい） ===== -->
+    <section id="program-1" class="section section--cream">
+      <div class="container">
+        <h2 class="section-title">第1部</h2>
+        <h3 id="talk1" class="program__title">トークイベント、特別展示、子ども教室、サイン会、パフォーマンス、日本酒バーなど様々なプログラムを企画中です！</h3>
+
+        <!-- talk block -->
+        <article class="talk">
+          <p class="comingsoon">COMING SOON!!!</p>
+          <div class="banner">
+            <img src="assets/guests.png" alt="バナー画像">
+          </div>
+        </article>
+        <div class="divider__orange"></div>
+
+        <h3 id="market" class="program__title">ゲンロン・シラス<br>コミュニティマーケット</h3>
+
+        <!-- block -->
+        <article class="talk">
+          <p class="talk__desc">
+            総会お馴染みの即売会企画「ゲンロン・シラス コミュニティマーケット」を今年も開催します。友の会会員とシラス配信者による多彩なブースが勢揃いするフリーマーケット。出店内容は同人誌や手工芸作品、お菓子などの販売から、占いやサークルの活動紹介など多種多様です。<br><br>今年はマーケット会場をこれまでのメインホールから、より広いエントランスへ移して開催します。さらに、マーケット会場はチケット不要でどなたでも入場できます！ぜひふるってご参加ください。
+          </p>
+        <!-- 画像バナー系（スクショの途中に挟まるブロックの想定） -->
+          <div class="banner">
+            <img src="assets/entrance_01.jpg" alt="バナー画像">
+            <p class="banner__image__caption">CITY HALL & GALLERY GOTANDA エントランス</p>
+          </div>
+          <div class="center-block">
+            <div class="info-table" role="table" aria-label="チケット情報">
+              <p class="table-caption">募集要項</p>
+              <dl class="info-table__row" role="row">
+                <dt class="info-table__th" role="rowheader">日程</dt>
+                <dd class="info-table__td" role="cell">2026年3月20日（金・祝）
+                  <ul class="table-list">
+                    <li>設営・準備／10:00〜11:30</li>
+                    <li>開幕挨拶 ／11:30〜12:00［※］</li>
+                    <li>開催／12:30〜19:00</li>
+                    <li>閉幕挨拶 ／ 19:30〜20:00 ［※］</li>
+                    <li>撤収／20 :00〜21:00</li>
                 </ul>
-              </div>
+                ※開幕／閉幕挨拶の時間はエントランスにスタッフを配置するため、ホール内でご参加いただけます。</dd>
+              </dl>
+
+              <dl class="info-table__row" role="row">
+                <dt class="info-table__th" role="rowheader">会場</dt>
+                <dd class="info-table__td" role="cell">CITY HALL & GALLERY GOTANDA エントランス</dd>
+              </dl>
+
+              <dl class="info-table__row" role="row">
+                <dt class="info-table__th" role="rowheader">出店数</dt>
+                <dd class="info-table__td" role="cell">30〜40ブース程度</dd>
+              </dl>
+
+              <dl class="info-table__row" role="row">
+                <dt class="info-table__th" role="rowheader">出店資格</dt>
+                <dd class="info-table__td" role="cell">友の会16期会員（締め切りまでのご入会で出店可能）、またはシラス配信者</dd>
+              </dl>
+
+              <dl class="info-table__row" role="row">
+                <dt class="info-table__th" role="rowheader">出店料金</dt>
+                <dd class="info-table__td" role="cell">
+                出店料　24,200円（税込）<br>※出店者には第1部入場パスを2名分（19,800円相当）ご提供します。入場パスには配信視聴権2名分も含みます。<br>※総会第2部へのご参加には追加でチケット購入が必要です。お1人につき7,700円で第2部チケットをご購入いただけます。
+                </dd>
+              </dl>
+
+              <dl class="info-table__row" role="row">
+                <dt class="info-table__th" role="rowheader">提供内容</dt>
+                <dd class="info-table__td" role="cell">
+                  <ul class="table-list">
+                    <li>テーブル：W900 × D450 × H720 mm<br>※W1,800 × D450 × H720 mm のテーブル1台を2組で半分ずつ使用</li>
+                    <li>イス：2脚</li>
+                    <li>電源：利用可（要事前申請）</li>
+                  </ul>
+                </dd>
+              </dl>
+
+              <dl class="info-table__row" role="row">
+                <dt class="info-table__th" role="rowheader">スケジュール</dt>
+                <dd class="info-table__td" role="cell">
+                  <ul class="table-list">
+                    <li>1/30（金）出店申込一次締め切り</li>
+                    <li>2月初旬　ブース情報・広報素材 提出締切</li>
+                    <li>2月下旬　出店手引きを配布</li>
+                  </ul>
+                </dd>
+              </dl>
             </div>
           </div>
-          <div class="action-cta" data-animate="fade-up" data-delay="120">
-            <a class="cta-button is-active" href="https://forms.gle/VdCfGvNwJWiFD7HP7" target="_blank" rel="noopener noreferrer">
-              応募フォーム
-            </a>
+
+            <div class="talk__white__wrapper">
+              <p class="talk__desc__title">出店者向け注意事項</p>
+              <ul class="">
+                <li>マーケット会場は、友の会会員以外の方でも入場できます（チケット不要）。非会員の方がブース運営をお手伝いいただくことも可能です。</li>
+                <li>会場内は気温が低くなる場合があります。ご自身で防寒対策をいただくようお願いいたします。</li>
+                <li>マーケット会場とトーク会場が離れているため、出店中はトークをご観覧いただけません。観覧をご希望の場合は、交代できる方をお探しいただくなどの対応をご検討ください。</li>
+                <li>マーケット会場内での飲食はできません。飲食はホワイエ等の指定場所、またはJPビル内の飲食店をご利用ください。</li>
+              </ul>
+            </div> 
+            <div class="talk__cta">
+              <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdlYK9Pr5x7put0btBBvTncta13MuWx2hCRx7L-kpl4IQTKeA/viewform" target="_blank" rel="noopener">応募フォーム：1/30（金）まで</a>
+            </div>
+
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Program: 第二部（紫背景っぽい） ===== -->
+    <section id="program-2" class="section section--lavender">
+      <div class="container">
+        <h2 class="section-title">第2部</h2>
+        <h3 id="talk2" class="program__title">トークイベント、人文ウォッチ公開生放送、バー野口など、深夜も様々なプログラムを開催予定です！</h3>
+
+        <article class="talk">
+          <p class="comingsoon text-blue">COMING SOON!!!</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ACCESS -->
+    <section id="access" class="section section--white">
+      <div class="container">
+        <h2 class="section-title">ACCESS</h2>
+
+        <div class="access">
+          <div class="map">
+            <!-- <img src="assets/access-map.jpg" alt="アクセス地図"> -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6486.396893703954!2d139.722013!3d35.622834!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfde5edae39%3A0x3951e75c2e344f6a!2z44K344OG44Kj44Ob44O844Or77yG44Ku44Oj44Op44Oq44O8IOS6lOWPjeeUsCAoQ0lUWSBIQUxMICYgR0FMTEVSWSBHT1RBTkRBKQ!5e0!3m2!1sja!2sjp!4v1767876545678!5m2!1sja!2sjp" width="540" height="305" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
+
+          <div class="access__text">
+            <p class="access__title">CITY HALL & GALLERY GOTANDA</p>
+            <p class="access__detail"><strong>○住所</strong><br>〒141-0031<br>東京都品川区西五反田8-4-13<br>五反田JPビルディング 3階</p>
+            <p class="access__detail"><strong>○アクセス</strong><br>JR・都営浅草線・東急池上線五反田駅西口から徒歩5分<br>東急池上線大崎広小路駅から徒歩1分</p>
+          </div>
+        </div>
+
+        <div class="access">
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6486.396893703954!2d139.722013!3d35.622834!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfde5edae39%3A0x3951e75c2e344f6a!2z44K344OG44Kj44Ob44O844Or77yG44Ku44Oj44Op44Oq44O8IOS6lOWPjeeUsCAoQ0lUWSBIQUxMICYgR0FMTEVSWSBHT1RBTkRBKQ!5e0!3m2!1sja!2sjp!4v1767876545678!5m2!1sja!2sjp" width="560" height="280" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <div class="access__text">
+            <p class="access__title">ゲンロンカフェ</p>
+            <p class="access__detail"><strong>○住所</strong><br>〒141-0031<br>東京都品川区西五反田1-11-9 司ビル6F</p>
+            <p class="access__detail"><strong>○アクセス</strong><br>JR・都営浅草線・東急池上線五反田駅西口から徒歩3分<br>東急池上線大崎広小路駅から徒歩4分</p>
+          </div>
+        </div>
+
+        <div class="access">
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6486.396893703954!2d139.722013!3d35.622834!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfde5edae39%3A0x3951e75c2e344f6a!2z44K344OG44Kj44Ob44O844Or77yG44Ku44Oj44Op44Oq44O8IOS6lOWPjeeUsCAoQ0lUWSBIQUxMICYgR0FMTEVSWSBHT1RBTkRBKQ!5e0!3m2!1sja!2sjp!4v1767876545678!5m2!1sja!2sjp" width="540" height="305" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <div class="access__text">
+            <p class="access__title">シラススタジオ</p>
+            <p class="access__detail"><strong>○住所</strong><br>〒141-0031<br>東京都品川区西五反田1丁目16-6 イルモンドビル2F</p>
+            <p class="access__detail"><strong>○アクセス</strong><br>JR・都営浅草線・東急池上線五反田駅西口から徒歩4分<br>東急池上線大崎広小路駅から徒歩3分</p>
+          </div>
+        </div>
+
+        <div class="center-block">
+          <a class="btn" href="https://shop.genron.co.jp/products/sokai" target="_blank">チケットを購入する</a>
         </div>
       </div>
     </section>
 
-    <section class="action" id="tomonokai">
-      <div class="action-inner content">
-        <div class="action-text">
-          <p class="eyebrow text-accent">Tomonokai</p>
-          <h2 class="action-heading">
-            <span class="heading-stack">ゲンロン友の会</span>
-            <span class="heading-stack">入会のご案内</span>
-          </h2>
-          <p>総会2026に参加できるのは友の会会員だけ。この機会にぜひ入会をご検討ください！</p>
-          <figure class="action-visual" data-animate="fade-up" data-delay="40">
-            <a class="visual-frame" href="https://shop.genron.co.jp/pages/tmnk" target="_blank" rel="noopener noreferrer">
-              <img src="assets/tomonokai16_1_mainbanner.webp" alt="ゲンロン友の会16期メインビジュアル">
-              <span class="visual-chip">友の会</span>
-            </a>
-          </figure>
-          <p>ゲンロン友の会は、ゲンロンの活動を支えてくださる方の会員組織です。入会すると、書籍が届くほか、会員限定イベントへの参加など様々な特典があります。</p>
-          <p>年間サブスクリプション制で、いつ入会されても1年間有効。知的好奇心に満ちたみなさんをお待ちしています。</p>
-          <div class="action-cta" data-animate="fade-up" data-delay="80">
-            <a class="cta-button is-active" href="https://shop.genron.co.jp/pages/tmnk" target="_blank" rel="noopener noreferrer">
-              入会はこちらから
-            </a>
-          </div>
+    <section id="tomonokai" class="section section--grey">
+      <div class="container">
+        <h2 class="section-title">総会に参加できるのは友の会会員のみ！<br>この機会にぜひご入会ください。</h2>
+        <p class="talk__desc">ゲンロン友の会は、ゲンロンの活動を支えてくださる方の会員組織です。入会すると、書籍が届くほか、会員限定イベントへの参加など様々な特典があります。<br>年間サブスクリプション制で、いつ入会されても1年間有効。知的好奇心に満ちたみなさんをお待ちしています。</p>
+
+        <div class="divider__orange"></div>
+
+        <h3>入会割引セットのご案内</h3>
+          <p class="announce">期間限定で、友の会第16期（ベーシックコース）入会と総会チケットの<span>割引セット</span>をご用意しています。<br>入会と総会チケットを個別にご購入いただくより、<span>2,200円お得</span>です。<span>割引セットの販売は1/30（金）から</span>です。まだ会員でないみなさま、ぜひこの機会にご検討ください！</p>
+        <div class="banner"><img src="assets/tomonokai16_1_mainbanner.jpg" alt="友の会入会"></div>
+        <div class="talk__cta">
+          <a class="btn btn--tomonokai" href="https://shop.genron.co.jp/pages/tmnk">友の会入会はこちら</a>
         </div>
       </div>
     </section>
-  </main>
 
   <footer class="site-footer">
-    <div class="footer-inner content">
-      <div>
-        <p class="footer-logo">ゲンロン友の会総会<span class="text-accent">2026</span></p>
-        <p class="footer-copy">© Genron</p>
+    <div class="site-footer__inner">
+      <div class="site-footer__left">
+        <p class="site-footer__title">ゲンロン友の会総会 <span>2026</span></p>
+        <p class="site-footer__sub">@Genron</p>
       </div>
-      <div class="footer-social">
-        <a class="social-btn share-btn" aria-label="Xでシェア"
-          href="https://x.com/intent/post?text=%E3%82%B2%E3%83%B3%E3%83%AD%E3%83%B3%E5%8F%8B%E3%81%AE%E4%BC%9A%E7%B7%8F%E4%BC%9A2026%E7%89%B9%E8%A8%AD%E3%83%9A%E3%83%BC%E3%82%B8&url=https%3A//sokai.genron.co.jp"
-          target="_blank" rel="noopener noreferrer" data-share-text="ゲンロン友の会総会2026特設ページ" data-share-url="https://sokai.genron.co.jp">
-          <img src="assets/x_icon.svg" alt="" aria-hidden="true">
+
+      <div class="site-footer__right">
+        <span class="site-footer__share-text">総会をシェア</span>
+
+        <!-- X share -->
+        <a
+          class="site-footer__x"
+          href="https://twitter.com/intent/tweet?text=ゲンロン友の会総会2026&url=https://sokai.genron.co.jp/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Xでシェア"
+        >
+          <!-- X logo (SVG) -->
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.213-6.817-5.967 6.817H1.68l7.73-8.835L1.25 2.25h6.83l4.713 6.231 5.451-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/>
+          </svg>
         </a>
       </div>
     </div>
   </footer>
+  </main>
 
-  <script src="script.js"></script>
+  <!-- Sticky Ticket Bar -->
+  <div class="ticketbar" id="ticketBar" aria-label="チケット購入">
+    <a class="ticketbar__btn btn" href="https://shop.genron.co.jp/products/sokai" target="_blank">総会チケットを購入する</a>
+  </div>
+
+  <!-- Image Modal (global) -->
+  <div class="imgmodal" id="imgModal" aria-hidden="true">
+    <div class="imgmodal__backdrop" data-imgmodal-close></div>
+
+    <div class="imgmodal__dialog" role="dialog" aria-modal="true" aria-label="画像の拡大表示">
+      <button class="imgmodal__close" type="button" aria-label="閉じる" data-imgmodal-close>×</button>
+
+      <figure class="imgmodal__figure">
+        <img class="imgmodal__img" id="imgModalImg" alt="" />
+        <figcaption class="imgmodal__caption" id="imgModalCaption"></figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
 </body>
 </html>
