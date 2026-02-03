@@ -253,3 +253,24 @@ window.addEventListener('resize', () => {
     openModal(img.src, img.alt);
   });
 })();
+// ===== Countdown: days until 3/20 =====
+(() => {
+  const el = document.getElementById('daysLeft');
+  if (!el) return;
+
+  // 対象日（年は必要に応じて調整）
+  const TARGET = new Date(2026, 2, 20); // ※ 月は0始まり（3月=2）
+
+  // 今日を「日付のみ」で扱う（時刻ズレ防止）
+  const today = new Date();
+  const startOfToday = new Date(
+    today.getFullYear(),
+    today.getMonth(),
+    today.getDate()
+  );
+
+  const diffMs = TARGET - startOfToday;
+  const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+
+  el.textContent = diffDays;
+})();
