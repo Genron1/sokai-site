@@ -466,13 +466,6 @@ body.is-menu-open .drawer{ transform: translateX(0); }
   font-weight: 700;
   color: var(--red);
 }
-.discount__announce {
-  font-weight: 700;
-}
-.discount__announce a {
-  color: var(--orange);
-  text-decoration: underline;
-}
 /* ===== NEWS ===== */
 .news{
   max-width: 720px;
@@ -629,6 +622,13 @@ body.is-menu-open .drawer{ transform: translateX(0); }
   color: #fff;
   border-radius: 60px;
   font-weight: 500;
+}
+.discount__announce {
+  font-weight: 700;
+}
+.discount__announce a {
+  color: var(--orange);
+  text-decoration: underline;
 }
 @media (max-width: 620px){
   .talk__white__wrapper {
