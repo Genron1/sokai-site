@@ -363,7 +363,7 @@ body.is-menu-open .drawer{ transform: translateX(0); }
 /* ===== CTA / Buttons ===== */
 .cta{
   /*margin-bottom: 30px;*/ /* ===== 本番ここ活かし ===== */
-  padding: 16px 0 40px;
+  padding: 16px 0;
   text-align:center;
   background-color:#FFF1EC;
 }
