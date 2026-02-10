@@ -656,7 +656,7 @@ body.is-menu-open .drawer{ transform: translateX(0); }
   text-align: center;
 }
 .speaker__imgwrap{
-  border-radius: 14px;
+  /*border-radius: 14px;*/
   overflow:hidden;
 /*  box-shadow: var(--shadow);
   border: 1px solid rgba(0,0,0,.06);
@@ -670,6 +670,7 @@ body.is-menu-open .drawer{ transform: translateX(0); }
 .speaker__name{
   margin: 10px 0 0;
   font-weight: 700;
+  font-size: 1.2rem;
   letter-spacing: .03em;
   min-height: 2.2em; /* 名前の高さブレ軽減 */
 }
