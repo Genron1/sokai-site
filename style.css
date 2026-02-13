@@ -1232,6 +1232,7 @@ body.is-imgmodal-open .imgmodal{
   .ticketbar__btn {
     padding: 4px 18px;
     margin: 4px auto;
+    width: 100%;
     font-size: 1.0rem;
   }
 }
