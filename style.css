@@ -594,6 +594,9 @@ body.is-menu-open .drawer{ transform: translateX(0); }
   letter-spacing:.06em;
   margin: 0 0 24px;
 }
+.talk__heading span {
+  font-size: 1.8rem;
+}
 .talk__desc__title{
   margin: 0 0 14px;
   color:var(--blue);
@@ -639,6 +642,9 @@ body.is-menu-open .drawer{ transform: translateX(0); }
   .talk__white__wrapper {
     padding:20px;
   }
+  .talk__heading span {
+    font-size: 1.6rem;
+  } 
 }
 
 .movie__area {
@@ -943,6 +949,28 @@ body.is-menu-open .drawer{ transform: translateX(0); }
   margin: 4px;
   font-weight: 700;
   color: #fff;
+}
+
+.price-list{
+  margin: 16px 0;
+}
+
+.price-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+
+.price-row dt{
+  font-weight: 500;
+}
+
+.price-row dd{
+  margin: 0;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums; /* ← 数字揃える神指定 */
 }
 
 
