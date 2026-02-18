@@ -737,6 +737,8 @@ body.is-menu-open .drawer{ transform: translateX(0); }
 .booth {
   display: flex;
   margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--orange);
 }
 .booth__imgwrap {
   width: 30%;
