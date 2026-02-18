@@ -734,18 +734,46 @@ body.is-menu-open .drawer{ transform: translateX(0); }
   }
 }
 /* ==== booth ==== */
+.booth {
+  display: flex;
+  margin-bottom: 24px;
+}
+.booth__imgwrap {
+  width: 30%;
+}
+.booth__descwrap {
+  width: 70%;
+  padding-left: 24px;
+  text-align: left;
+}
 .booth__name {
-  margin: 10px 0 0;
+  margin: 0 auto;
   font-weight: 700;
   font-size: 1.2rem;
   letter-spacing: .03em;
-  /*min-height: 3.2em;*/
 }
 .booth__managers {
+  margin: 8px auto;
   font-weight: 500;
+  color: var(--orange);
 }
 .booth__desc {
+  margin: 0 auto;
   text-align: left;
+}
+/* Mobile: はみ出さない（列は縮む） */
+@media (max-width: 620px){
+  .booth {
+    display: block;
+    margin-bottom: 24px;
+  }
+  .booth__imgwrap {
+    width: 100%;
+  }
+  .booth__descwrap {
+    width: 100%;
+    padding-left: 0;
+  }
 }
 
 /* ===== Access ===== */
