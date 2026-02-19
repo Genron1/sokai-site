@@ -368,10 +368,17 @@ body.is-menu-open .drawer{ transform: translateX(0); }
   background-color:#FFF1EC;
 }
 .cta__note{
-  margin:0 0 10px;
+  margin:0 auto;
   font-weight: 700;
   font-size: clamp(18px, 3.0vw, 32px);
   letter-spacing:.06em;
+}
+.cta__important{
+  margin: 0 0 4px;
+  font-weight: 700;
+  font-size: 16px
+  letter-spacing:.06em;
+  color: var(--red);
 }
 #daysLeft {
   font-size: 48px;
