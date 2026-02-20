@@ -785,6 +785,10 @@ body.is-menu-open .drawer{ transform: translateX(0); }
   }
 }
 
+.entrance_free {
+  color: var(--pink);
+}
+
 /* ===== Access ===== */
 .access{
   max-width: 1024px;
