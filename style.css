@@ -800,6 +800,35 @@ body.is-menu-open .drawer{ transform: translateX(0); }
   color: var(--pink);
 }
 
+.accordion {
+  margin: 2em 0;
+}
+.accordion__summary {
+  display: block;
+  background: var(--pink); /* 見出しの背景色 */
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  list-style: none; /* 矢印を消す */
+  cursor: pointer;
+  margin-bottom: 16px;
+  padding: 10px 38px 10px 10px;
+}
+.accordion__summary::-webkit-details-marker {
+  display: none;
+}
+.accordion__summary::after {
+  content: "+";
+  font-size: 1.4em; /* 記号のサイズ */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.accordion[open] .accordion__summary::after {
+  content: "−";
+}
+
 /* ===== Access ===== */
 .access{
   max-width: 1024px;
