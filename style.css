@@ -522,7 +522,7 @@ body.is-menu-open .drawer{ transform: translateX(0); }
 .about p{ 
   margin: 0 0 14px; 
   font-weight: 700;
-  font-size: clamp(18px, 2.5vw, 24px);
+  font-size: clamp(16px, 2.0vw, 20px);
 }
 
 /* ===== Image grids ===== */
