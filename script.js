@@ -274,3 +274,47 @@ window.addEventListener('resize', () => {
 
   el.textContent = diffDays;
 })();
+
+const btn = document.getElementById("newsToggle");
+const btnText = btn.querySelector(".news__toggle-text");
+const items = document.querySelectorAll("#newsList .news__item");
+
+const visibleCount = 3;
+let opened = false;
+
+/* 初期状態 */
+
+items.forEach((item, i) => {
+  if (i >= visibleCount) {
+    item.classList.add("hidden");
+  }
+});
+
+/* ニュースが少ない場合はボタン非表示 */
+
+if (items.length <= visibleCount) {
+  btn.style.display = "none";
+}
+
+/* クリック */
+
+btn.addEventListener("click", () => {
+
+  opened = !opened;
+
+  items.forEach((item, i) => {
+    if (i >= visibleCount) {
+      item.classList.toggle("hidden");
+    }
+  });
+
+  btn.classList.toggle("open");
+
+  if (opened) {
+    btnText.textContent = "閉じる";
+  } else {
+    btnText.textContent = "もっと見る";
+    items[0].scrollIntoView({ behavior: "smooth" });
+  }
+
+});

@@ -507,6 +507,41 @@ body.is-menu-open .drawer{ transform: translateX(0); }
 }
 .news__text{ margin:0; font-weight:400; }
 .news__text a{ text-decoration:underline; }
+
+.news__item.hidden {
+  display: none;
+}
+
+/* ボタン */
+
+.news__toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 100px;
+  margin: 30px auto 0;
+  padding: 10px 18px;
+  border: 1px solid #222;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all .25s;
+}
+
+.news__toggle:hover {
+  background: #222;
+  color: #fff;
+}
+
+.news__toggle::after {
+  content: "↓";
+  transition: transform .25s;
+}
+
+.news__toggle.open::after {
+  transform: rotate(180deg);
+}
+
 @media (max-width: 560px){
   .news__item{ grid-template-columns: 1fr; }
 }
