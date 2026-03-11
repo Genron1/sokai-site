@@ -849,7 +849,7 @@ body.is-menu-open .drawer{ transform: translateX(0); }
   color: var(--pink);
 }
 .entrance_free span {
-  font-size: 16px;
+  font-size: clamp(16px, 1.8vw, 20px);
 }
 
 .accordion {
