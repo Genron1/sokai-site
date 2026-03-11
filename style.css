@@ -478,6 +478,16 @@ body.is-menu-open .drawer{ transform: translateX(0); }
 .annotation span{
   color:#FF1418;
 }
+.free_annotation{
+  font-weight: 700;
+  text-align: left;
+  padding: 16px;
+  background-color: var(--cream);
+}
+.free_annotation a {
+  text-decoration: underline;
+  color: var(--orange);
+}
 .soldout{
   color: var(--red);
   padding-left: 2px;
@@ -837,6 +847,9 @@ body.is-menu-open .drawer{ transform: translateX(0); }
 
 .entrance_free {
   color: var(--pink);
+}
+.entrance_free span {
+  font-size: 16px;
 }
 
 .accordion {
