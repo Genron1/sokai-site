@@ -260,7 +260,7 @@ window.addEventListener('resize', () => {
   const container = document.querySelector('.cta__note.countdown');
   if (!container) return;
 
-  const TARGET = new Date(2026, 2, 1); // 3/20
+  const TARGET = new Date(2026, 2, 20); // 3/20
 
   const today = new Date();
   const startOfToday = new Date(
