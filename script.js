@@ -257,10 +257,12 @@ window.addEventListener('resize', () => {
 // ===== Countdown: days until 3/20 =====
 (() => {
   const el = document.getElementById('daysLeft');
-  const container = document.querySelector('.cta__note.countdown');
-  if (!container) return;
+  const note = document.querySelector('.cta__note.countdown');
+  const important = document.querySelector('.cta__important');
 
-  const TARGET = new Date(2026, 2, 20); // 3/20
+  if (!note) return;
+
+  const TARGET = new Date(2026, 2, 20);
 
   const today = new Date();
   const startOfToday = new Date(
@@ -273,13 +275,41 @@ window.addEventListener('resize', () => {
   const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
 
   if (diffDays > 0) {
+
+    // ===== 開催前 =====
     if (el) el.textContent = diffDays;
+    if (important) {
+      important.textContent = "第1部チケット・配信チケット発売中";
+    }
 
   } else if (diffDays === 0) {
-    container.textContent = "＼3月20日は総会開催日です！／";
+
+    // ===== 3/20 当日 =====
+    note.textContent = "＼本日は総会開催日です！／";
+    if (important) {
+      important.textContent = "第1部チケット・配信チケット当日券発売中";
+    }
+
+  } else if (diffDays === -1) {
+
+    // ===== 3/21 =====
+    note.textContent = "＼本日は総会開催日です！／";
+    if (important) {
+      important.textContent =
+        "チケットご購入は5/26（月）まで、アーカイブご視聴は6/2（月）まで可能です。";
+    }
 
   } else {
-    container.innerHTML = "";
+
+    // ===== 3/22以降 =====
+    note.innerHTML =
+      "ご来場ありがとうございました！<br>友の会総会2026は閉幕いたしました。";
+
+    if (important) {
+      important.textContent =
+        "チケットご購入は5/26（月）まで、アーカイブご視聴は6/2（月）まで可能です。";
+    }
+
   }
 
 })();
