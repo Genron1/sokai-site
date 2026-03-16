@@ -276,10 +276,10 @@ window.addEventListener('resize', () => {
     if (el) el.textContent = diffDays;
 
   } else if (diffDays === 0) {
-    container.textContent = "＼本日は総会開催日です！／";
+    container.textContent = "＼3月20日は総会開催日です！／";
 
   } else {
-    container.innerHTML = "ご来場ありがとうございました！<br>友の会総会2026は閉幕いたしました。";
+    container.innerHTML = "";
   }
 
 })();
