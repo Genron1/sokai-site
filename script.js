@@ -285,7 +285,7 @@ window.addEventListener('resize', () => {
   } else if (diffDays === 0) {
 
     // ===== 3/20 当日 =====
-    note.textContent = "＼本日は総会開催日です！／";
+    note.textContent = "＼総会開催日です！／";
     if (important) {
       important.textContent = "第1部チケット・配信チケット当日券発売中";
     }
@@ -293,7 +293,7 @@ window.addEventListener('resize', () => {
   } else if (diffDays === -1) {
 
     // ===== 3/21 =====
-    note.textContent = "＼本日は総会開催日です！／";
+    note.textContent = "＼総会開催日です！／";
     if (important) {
       important.textContent =
         "チケットご購入は5/26（月）まで、アーカイブご視聴は6/2（月）まで可能です。";
