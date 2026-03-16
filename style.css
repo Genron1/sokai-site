@@ -13,7 +13,7 @@
   --red:red;
   --pink:#f44c89;
   --green:#c4fca9;
-  --lightblue:#69E9FF;
+  --lightblue:#45ABD0;
   --orange:#FF5414;
 
   --max: 1024px;
@@ -1404,7 +1404,73 @@ body.is-imgmodal-open .imgmodal{
   }
 }
 
+/* ===== FAQ全体 ===== */
 
+.faq{
+  max-width:760px;
+  margin:60px auto;
+}
+
+/* ===== 各FAQ ===== */
+
+.faq-item{
+  border-bottom:1px solid #ddd;
+}
+
+/* ===== 質問 ===== */
+
+.faq-question{
+  display:grid;
+  grid-template-columns:24px 1fr auto;
+  align-items:center;
+  gap:10px;
+  padding:18px 0;
+  cursor:pointer;
+  list-style:none;
+}
+
+.faq-question::-webkit-details-marker{
+  display:none;
+}
+
+/* Q / A ラベル */
+
+.faq-label{
+  font-weight:bold;
+  font-size: 18px;
+}
+.faq-label.qes {
+  color: var(--lightblue);
+}
+.faq-label.asw {
+  color: var(--pink);
+}
+
+
+/* ===== 回答 ===== */
+
+.faq-answer{
+  display:grid;
+  grid-template-columns:24px 1fr;
+  gap:10px;
+  padding-bottom:20px;
+}
+
+.faq-text p{
+  margin:0 0 12px;
+  line-height:1.7;
+}
+
+/* ===== + - アイコン ===== */
+
+.faq-question::after{
+  content:"+";
+  font-size:20px;
+}
+
+details[open] .faq-question::after{
+  content:"−";
+}
 
 
 /* 固定ヘッダー分だけアンカー位置を下げる */
