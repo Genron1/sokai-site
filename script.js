@@ -253,15 +253,15 @@ window.addEventListener('resize', () => {
     openModal(img.src, img.alt);
   });
 })();
+
 // ===== Countdown: days until 3/20 =====
 (() => {
   const el = document.getElementById('daysLeft');
-  if (!el) return;
+  const container = document.querySelector('.cta__note.countdown');
+  if (!container) return;
 
-  // 対象日（年は必要に応じて調整）
-  const TARGET = new Date(2026, 2, 20); // ※ 月は0始まり（3月=2）
+  const TARGET = new Date(2026, 2, 1); // 3/20
 
-  // 今日を「日付のみ」で扱う（時刻ズレ防止）
   const today = new Date();
   const startOfToday = new Date(
     today.getFullYear(),
@@ -272,7 +272,16 @@ window.addEventListener('resize', () => {
   const diffMs = TARGET - startOfToday;
   const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
 
-  el.textContent = diffDays;
+  if (diffDays > 0) {
+    if (el) el.textContent = diffDays;
+
+  } else if (diffDays === 0) {
+    container.textContent = "＼本日は総会開催日です！／";
+
+  } else {
+    container.innerHTML = "ご来場ありがとうございました！<br>友の会総会2026は閉幕いたしました。";
+  }
+
 })();
 
 const btn = document.getElementById("newsToggle");
