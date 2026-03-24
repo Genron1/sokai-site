@@ -307,7 +307,7 @@ window.addEventListener('resize', () => {
 
     if (important) {
       important.textContent =
-        "チケットご購入は5/26（月）まで、アーカイブご視聴は6/2（月）まで可能です。";
+        "チケットご購入は5/25（月）まで、アーカイブご視聴は6/1（月）まで可能です。";
     }
 
   }
